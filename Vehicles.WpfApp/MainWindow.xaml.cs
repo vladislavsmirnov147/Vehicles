@@ -6,7 +6,6 @@ namespace Vehicles.WpfApp
 {
     public partial class MainWindow : Window
     {
-        // Общая коллекция Vehicle, требуемая заданием.
         private readonly List<Vehicle> vehicles = new();
 
         public MainWindow()
@@ -63,7 +62,6 @@ namespace Vehicles.WpfApp
 
             Vehicle vehicle = vehicles[index];
 
-            // Полиморфизм: вызываем Move через базовый тип Vehicle.
             string message = vehicle.Move(10);
 
             LogListBox.Items.Add(message);
